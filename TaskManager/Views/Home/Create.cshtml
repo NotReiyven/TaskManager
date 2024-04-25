@@ -1,0 +1,29 @@
+﻿@model TaskManager.Models.Task
+
+<h2>Create</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Details" class="control-label"></label>
+        <input asp-for="Details" class="form-control" />
+        <span asp-validation-for="Details" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DueDate" class="control-label"></label>
+        <input asp-for="DueDate" class="form-control" />
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" asp-for="IsDone" /> Done
+            </label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

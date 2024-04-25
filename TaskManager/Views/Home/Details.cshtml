@@ -1,0 +1,30 @@
+﻿@model TaskManager.Models.Task
+
+@{
+    ViewData["Title"] = "Create Task";
+}
+
+<h1>Create Task</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" class="form-control" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Details">Details</label>
+        <textarea asp-for="Details" class="form-control"></textarea>
+        <span asp-validation-for="Details" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DueDate">Due Date</label>
+        <input asp-for="DueDate" class="form-control" />
+        <span asp-validation-for="DueDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsDone">Is Done</label>
+        <input asp-for="IsDone" type="checkbox" class="form-check-input" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
